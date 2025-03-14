@@ -186,6 +186,7 @@ fun setAlarm(context: Context, hour: Int, minute: Int, message: String) {
 
     try {
         context.startActivity(intent)
+        Toast.makeText(context, "Alarm set for $hour:$minute with message: $message", Toast.LENGTH_SHORT).show()
     } catch (e: Exception) {
         Toast.makeText(context, "No alarm app available", Toast.LENGTH_SHORT).show()
     }
